@@ -1,8 +1,9 @@
 const Titulos = () => {
   return (
-    <>
-      <h1>Lista de Tareas</h1>
-    </>
+    <section className="text-center">
+      <h1 className="display-4">Lista de Tareas</h1>
+      <hr />
+    </section>
   );
 };
 
