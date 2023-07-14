@@ -1,5 +1,11 @@
+import ItemTarea from "./ItemTarea";
+
 const ListaTareas = () => {
-  return <div></div>;
+  return (
+    <>
+      <ItemTarea></ItemTarea>
+    </>
+  );
 };
 
 export default ListaTareas;
