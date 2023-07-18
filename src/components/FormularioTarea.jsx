@@ -6,9 +6,17 @@ const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
   const [listaTareas, setListaTareas] = useState([]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    //guardar la tarea en el array listaTareas
+    setListaTareas([...listaTareas, tarea]);
+    //limpiar el value del input
+    setTarea(" ");
+  };
+
   return (
     <>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Form.Group
           className="mb-4 d-flex justify-content-between"
           controlId="formBasicEmail"
@@ -21,7 +29,9 @@ const FormularioTarea = () => {
               setTarea(e.target.value);
             }}
           />
-          <Button variant="primary">Agregar</Button>
+          <Button variant="primary" type="submit">
+            Agregar
+          </Button>
         </Form.Group>
       </Form>
       <ListaTareas></ListaTareas>
