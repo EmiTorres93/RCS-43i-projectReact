@@ -3,8 +3,8 @@ import ItemTarea from "./ItemTarea";
 const ListaTareas = ({ propslistaTareas }) => {
   return (
     <>
-      {propslistaTareas.map(() => (
-        <ItemTarea></ItemTarea>
+      {propslistaTareas.map((tarea, index) => (
+        <ItemTarea key={index}></ItemTarea>
       ))}
     </>
   );
