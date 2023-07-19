@@ -1,9 +1,11 @@
 import ItemTarea from "./ItemTarea";
 
-const ListaTareas = () => {
+const ListaTareas = ({ propslistaTareas }) => {
   return (
     <>
-      <ItemTarea></ItemTarea>
+      {propslistaTareas.map(() => (
+        <ItemTarea></ItemTarea>
+      ))}
     </>
   );
 };
