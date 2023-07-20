@@ -11,15 +11,15 @@ const FormularioTarea = () => {
     //guardar la tarea en el array listaTareas
     setListaTareas([...listaTareas, tarea]);
     //limpiar el value del input
-    setTarea(" ");
+    setTarea("");
   };
 
   //crear función borrar tarea.
   const borrarTarea = (tareaBorrar) => {
-    let listaTareasFiltrada = listaTareas.filter((itemTarea) => {
-      itemTarea !== tareaBorrar;
-      setListaTareas(listaTareasFiltrada);
-    });
+    let listaTareasFiltrada = listaTareas.filter(
+      (itemTarea) => itemTarea !== tareaBorrar
+    );
+    setListaTareas(listaTareasFiltrada);
   };
 
   return (
@@ -44,7 +44,7 @@ const FormularioTarea = () => {
       </Form>
       <ListaTareas
         propslistaTareas={listaTareas}
-        borrarTarea={borrarTarea}
+        propsborrarTarea={borrarTarea}
       ></ListaTareas>
     </>
   );

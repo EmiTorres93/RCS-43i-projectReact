@@ -1,13 +1,13 @@
 import ItemTarea from "./ItemTarea";
 
-const ListaTareas = ({ propslistaTareas, borrarTarea }) => {
+const ListaTareas = ({ propslistaTareas, propsborrarTarea }) => {
   return (
     <>
       {propslistaTareas.map((tarea, index) => (
         <ItemTarea
           key={index}
           nombreTarea={tarea}
-          borrarTarea={borrarTarea}
+          propsborrarTarea={propsborrarTarea}
         ></ItemTarea>
       ))}
     </>
